@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Стоматологія</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img src="http://clipartix.com/wp-content/uploads/2016/04/Tooth-wall-tattoo-medium-pixel-clipart-vector-clip-art-clipartsfree.jpeg" height="100%"> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Стрілки</a></li>
+                <li><a href="#">Старий Самбір</a></li>
+                <li><a href="#">Самбір</a></li>
+                <li><a href="#">Ужгород</a></li>
+            </ul>
+        </div>
+    </nav> &nbsp; &nbsp; &nbsp;<a href="index.html"><span class="glyphicon glyphicon-home"></span> Назад на головне меню</a>
+    <div class="container">
+        <div class="row">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Пошук по направниках ..." title="Пошук">
+                        <div class="form-group row">
+                          <div class="col-sm-3">
+                            <label for="ex3">Хто направив</label>
+                            <input class="form-control" id="ex3" type="text">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="ex1">Пацієнт</label>
+                            <input class="form-control" id="ex1" type="text">
+                          </div>
+                           <div class="col-sm-1">
+                            <label for="ex1">Ціна</label>
+                            <input class="form-control" id="ex1" type="text">
+                          </div>
+                           <div class="col-sm-1">
+                            <label for="ex1">Оплата</label>
+                            <input class="form-control" id="ex1" type="text">
+                          </div>
+                          <div class="col-sm-3">
+                             <select class="selectpicker" data-size="5" style=" margin-top: 30px;">
+                                      <option>Сепарація зубів однієї щелепи</option>
+                                      <option>Знеболення провідникове</option>
+                                      <option>Апарат BI-HELIX</option>
+                                </select>
+                          </div>
+                          <div class="col-sm-1">
+                            <button type="submit" class="btn btn-default but-prei">Додати</button>
+                          </div>
+                          
+                        </div>
+                    
+           <hr />            
+                       <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="mytable" class="table table-bordred table-striped">
+                                <thead>
+
+                                    <th>№</th>
+                                    <th>Хто направив</th>
+                                    <th>Пацієнт</th>
+                                    <th>Вид робіт</th>
+                                    <th>Група робіт</th>
+                                    <th>Ціна</th>
+                                    <th>Оплата</th>
+                                    <th>Дата</th>
+                                    <th>Змінити</th>
+                                    <th>Видалити</th>
+                                </thead>
+                                <tbody>
+                                    
+                                   <tr>
+                                        <td>1</td>
+                                        <td>Петлюра Степан Ігорович</td>
+                                        <td>Пацієнт Богдан Батькович</td>
+                                        <td>Знеболення провідникове</td>
+                                        <td>Ортодонтичні</td>
+                                        <td>400</td>
+                                        <td>400</td>
+                                        <td>16.05.2016</td>
+                                        <td>
+                                            <p data-placement="top" data-toggle="tooltip" title="Edit">
+                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p data-placement="top" data-toggle="tooltip" title="Delete">
+                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Петлюра Степан Ігорович</td>
+                                        <td>Пацієнт Богдан Батькович</td>
+                                        <td>Знеболення провідникове</td>
+                                        <td>Ортодонтичні</td>
+                                        <td>400</td>
+                                        <td>400</td>
+                                        <td>16.05.2016</td>
+                                        <td>
+                                            <p data-placement="top" data-toggle="tooltip" title="Edit">
+                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p data-placement="top" data-toggle="tooltip" title="Delete">
+                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                        <td>3</td>
+                                        <td>Петлюра Степан Ігорович</td>
+                                        <td>Пацієнт Богдан Батькович</td>
+                                        <td>Знеболення провідникове</td>
+                                        <td>Ортодонтичні</td>
+                                        <td>400</td>
+                                        <td>400</td>
+                                        <td>16.05.2016</td>
+                                        <td>
+                                            <p data-placement="top" data-toggle="tooltip" title="Edit">
+                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p data-placement="top" data-toggle="tooltip" title="Delete">
+                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                            <div class="clearfix"></div>
+
+                        </div>
+                    </div>
+               
+            
+            <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                            <h4 class="modal-title custom_align" id="Heading">Змінити дані</h4> </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input class="form-control " type="text" placeholder="Хто направив"> 
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " type="text" placeholder="Пацієнт"> 
+                            </div>
+                            <div class="form-group">
+                                <select class="selectpicker" data-size="5">
+                                      <option>Сепарація зубів однієї щелепи</option>
+                                      <option>Знеболення провідникове</option>
+                                      <option>Апарат BI-HELIX</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " type="text" placeholder="Ціна"> 
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control " type="text" placeholder="Оплата"> 
+                            </div>
+                               <div class="form-group">
+                            <label for="dtp_input2" class="сol-md-2 control-label">Дата запису</label>
+                            <div class="input-group date form_date col-md-10" data-date="" data-date-format="dd.mm.yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" readonly>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input2" value="" />
+                        </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Зберегти</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                            <h4 class="modal-title custom_align" id="Heading">Видалити цей запис</h4> </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Ви впевнені, що хочете видалити цей запис?</div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Так</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Ні</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        </div>
+    </div>
+    <script src="js/functions.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'ua',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'uk',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'uk',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>
+</body>
+    
+</html>
