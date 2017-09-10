@@ -1,5 +1,6 @@
 $(function() {
     loadCity();
+    $( "#tabs" ).tabs();
     $(document).on("click", '#cities li', function() {
         var id = $(this).find('a').data("id");
         localStorage.setItem("city", id);
@@ -18,28 +19,73 @@ $(function() {
                 str+= '<option value="'+ data[i].id +'">' + data[i].name + "</option>";
             }
             $("#namePrice").html(str);
+            $("#namePriceWU").html(str);
+        });
+        
+        $("#tab2").click(function() {
+            $.ajax({
+                url: "http://localhost:50612/person/all",
+                method: "GET"
+            }).done(function(data) {
+                var str = "";
+                for(var i=0; i<data.length; i++) {
+                     str+= '<option value="'+ data[i].id +'">' + data[i].fullName + "</option>"
+                }
+                $("#users").html(str);
+            });
+        });
+        
+        $("#withUser").click(function() {
+            var cityId = localStorage.getItem("city");
+            var date = $("#dateWU");
+            var time = $("#timeWU");
+            var dateTime = date.val() + "T" + time.val() + ":00.764";
+            var recivier = $("#recivierWU");
+            var price = $("#namePriceWU").val();
+            var person = $("#users").val();
+            var obj = {
+                date: dateTime,
+                recivier: recivier.val(),
+                personId: person,
+                cityId: cityId,
+                priceId: price
+            };
+            console.log(obj);
+            
+            $.ajax({
+                url: "http://localhost:50612/receptions/create/withuser",
+                method: "POST",
+                data: obj
+            }).done(function(data) {
+                console.log(data);
+                recivier.val("");
+                date.val("");
+                time.val("");
+                alert("Запис добавлен");
+            })
         });
         
         $("#sub").click(function() {
-             var cityId = localStorage.getItem("city");
-            var date = $("#date").val();
-            var time = $("#time").val();
-            var dateTime = date + "T" + time + "Z";
-            var name = $("#name").val();
-            var tel = $("#tel").val();
-            var address = $("#adress").val();
-            var recivier = $("#adress").val();
+            var cityId = localStorage.getItem("city");
+            var date = $("#date");
+            var time = $("#time");
+            var dateTime = date.val() + "T" + time.val() + ":00.764";
+            var name = $("#name");
+            var tel = $("#tel");
+            var address = $("#adress");
+            var recivier = $("#recivier");
             var price = $("#namePrice").val();
+            console.log(dateTime);
             var obj = {
                 person: {
-                    fulName: name,
-                    address: address,
-                    phoneNumber: tel,
-                    recivier: recivier,
+                    fullName: name.val(),
+                    address: address.val(),
+                    phoneNumber: tel.val(),
+                    recivier: recivier.val(),
                     dateOfBirth: new Date()
                 },
                 recInfo: {
-                    date: "2017-09-07T14:36:42.823Z",
+                    date: dateTime,
                     cityId: cityId,
                     priceId: price
                 }
@@ -50,6 +96,13 @@ $(function() {
                 data: obj
             }).done(function(data) {
                 console.log(data);
+                name.val("");
+                tel.val("");
+                address.val("");
+                recivier.val("");
+                date.val("");
+                time.val("");
+                alert("Запис добавлено. Тепер перейдіть на сторінку 'Перегляд пацієнта' і заповніть дані про пацієнта");
             })
         });
         

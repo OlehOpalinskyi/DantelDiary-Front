@@ -8,6 +8,8 @@
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet"> 
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 
 <body>
     <nav class="navbar navbar-default">
@@ -59,11 +61,17 @@
         <div class="modal-dialog modal-md">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
+                <!--<div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Запис на прийом</h4> </div>
+                    <h4 class="modal-title">Запис на прийом</h4> </div>-->
                 <div class="modal-body">
-                    <form>
+                   <div id="tabs">
+                       <ul>
+                        <li><a href="#tabs-1">Новий пацієнт</a></li>
+                        <li><a href="#tabs-2" id="tab2">Постійний пацієнт</a></li>
+                      </ul>
+                       <div id="tabs-1">
+                           <form>
                         <div class="input-group col-md-12"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input id="name" type="text" class="form-control" name="email" placeholder="Прізвище Ім'я Побатькові"> 
                         </div>
@@ -77,7 +85,7 @@
                         </div>
                           <br />
                            <div class="input-group col-md-12"> <span class="input-group-addon"><i class="glyphicon glyphicon-hand-right"></i></span>
-                            <input id="recivier" type="text" class="form-control" name="adresa" placeholder="Ким скерований"> 
+                            <input id="recivier" type="text" class="form-control" name="recivier" placeholder="Ким скерований"> 
                         </div>
                             <br />
                         <div class="form-group">
@@ -112,6 +120,40 @@
                    </div>
                         
                     </form>
+                       </div>
+                       <div id="tabs-2">
+                           <p><select name="users" id="users"></select><button class="btn btn-success" id="withUser">Записати</button></p>
+                            <div class="input-group col-md-12"> <span class="input-group-addon"><i class="glyphicon glyphicon-hand-right"></i></span>
+                            <input id="recivierWU" type="text" class="form-control" name="recivier" placeholder="Ким скерований"> 
+                        </div>
+                            <br />
+                        <div class="form-group">
+                            <label for="dtp_input2" class="сol-md-2 control-label">Дата запису</label>
+                            <div class="input-group date form_date col-md-10" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" id="dateWU" value="" readonly>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input2" value="" />
+                        </div>
+                           
+                       <div class="form-group">
+                           <label for="dtp_input3" class="сol-md-2 control-label">Час запису</label>
+                            <div class="input-group date form_time col-md-10" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+                                <input class="form-control" size="16" id="timeWU" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input3" value="" /><br/>
+                        </div>
+                        
+                     <div class="form-group">
+                        <label class="сol-md-2 control-label">Група робіт</label>
+                        <select class="selectpicker" id="namePriceWU" data-size="5"></select>
+                   </div>
+                       </div>                        
+                   </div>
+                   
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
@@ -120,6 +162,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/loadHeader.js"></script>
