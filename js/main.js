@@ -50,14 +50,11 @@ $(function() {
                 cityId: cityId,
                 priceId: price
             };
-            console.log(obj);
-            
             $.ajax({
                 url: "http://localhost:50612/receptions/create/withuser",
                 method: "POST",
                 data: obj
             }).done(function(data) {
-                console.log(data);
                 recivier.val("");
                 date.val("");
                 time.val("");
@@ -75,19 +72,18 @@ $(function() {
             var address = $("#adress");
             var recivier = $("#recivier");
             var price = $("#namePrice").val();
-            console.log(dateTime);
             var obj = {
                 person: {
                     fullName: name.val(),
                     address: address.val(),
                     phoneNumber: tel.val(),
-                    recivier: recivier.val(),
                     dateOfBirth: new Date()
                 },
                 recInfo: {
                     date: dateTime,
                     cityId: cityId,
-                    priceId: price
+                    priceId: price,
+                    recivier: recivier.val()
                 }
             };
             $.ajax({
@@ -95,7 +91,6 @@ $(function() {
                 method: "POST",
                 data: obj
             }).done(function(data) {
-                console.log(data);
                 name.val("");
                 tel.val("");
                 address.val("");

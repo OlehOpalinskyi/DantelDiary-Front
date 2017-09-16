@@ -21,7 +21,6 @@ $(function() {
             nameP.val("");
             priceP.val("");
             groupP.val("");
-            console.log(data);
             var record = "<tr><td>" + data.id + "</td><td>" + data.name + "</td><td>" + data.price + "</td><td>" + data.kindOfWork + '</td><td><p data-placement="top" data-toggle="tooltip"><button class="btn btn-primary btn-xs editB" data-id="'+ data.id + '" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td><td><p data-placement="top" data-toggle="tooltip"><button data-id="' + data.id + '" class="btn btn-danger btn-xs delD"><span class="glyphicon glyphicon-trash"></span></button></p></td></tr>';
             $('#priceList').append(record);
         });

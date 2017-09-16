@@ -15,19 +15,14 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html"><img src="http://clipartix.com/wp-content/uploads/2016/04/Tooth-wall-tattoo-medium-pixel-clipart-vector-clip-art-clipartsfree.jpeg" height="100%"> </a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Стрілки</a></li>
-                <li><a href="#">Старий Самбір</a></li>
-                <li><a href="#">Самбір</a></li>
-                <li><a href="#">Ужгород</a></li>
-            </ul>
+            <ul class="nav navbar-nav" id="cities"></ul>
         </div>
     </nav> &nbsp; &nbsp; &nbsp;<a href="index.html"><span class="glyphicon glyphicon-home"></span> Назад на головне меню</a>
     <div class="container">
         <div class="row">
 
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Пошук..." title="Пошук">
-              <p style="font-weight: bold;">Кількість пацієнтів - 5</p>
+              <p style="font-weight: bold;">Кількість пацієнтів - <span id="count"></span></p>
                    <hr />
                     <div class="col-md-12">
                         <div class="table-responsive">
@@ -38,108 +33,10 @@
                                     <th>Адреса</th>
                                     <th>Email</th>
                                     <th>Телефон</th>
-                                    <th>Змінити</th>
                                     <th>Видалити</th>
                                     <th>Карточка</th>
                                 </thead>
-                                <tbody>
-                                    
-                                        <tr>
-                                            <td>Герич Роман Анатолійович</td>
-                                            <td>Стрілки</td>
-                                            <td>isometric.mohsin@gmail.com</td>
-                                            <td>+923335586757</td>
-                                            <td>
-                                                <p data-placement="top" data-toggle="tooltip" title="Edit">
-                                                    <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
-                                                </p>
-                                            </td>
-                                           <td>
-                                                <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                                    <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                                                </p>
-                                            </td>
-                                            <td>
-                                                <button data-toggle="modal" data-target="#pacient" type="button" class="btn-info">Карточка</button>
-                                            </td>
-                                        </tr>
-                                   
-                                    <tr>
-                                        <td>Пупкін Ігор Васильович</td>
-                                        <td>Лопушанка</td>
-                                        <td>isometric.mohsin@gmail.com</td>
-                                        <td>+923335586757</td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Edit">
-                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                                            </p>
-                                        </td>
-                                        <td>
-                                                <button data-toggle="modal" data-target="#pacient" type="button" class="btn-info">Карточка</button>
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Терещук Олег Батькович</td>
-                                        <td>Топільниця</td>
-                                        <td>isometric.mohsin@gmail.com</td>
-                                        <td>+923335586757</td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Edit">
-                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                                            </p>
-                                        </td>
-                                            <td>
-                                                <button data-toggle="modal" data-target="#pacient" type="button" class="btn-info">Карточка</button>
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Стеаненко Тарас Романович</td>
-                                        <td>Лужок</td>
-                                        <td>isometric.mohsin@gmail.com</td>
-                                        <td>+923335586757</td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Edit">
-                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                                            </p>
-                                        </td>
-                                        <td>
-                                                <button data-toggle="modal" data-target="#pacient" type="button" class="btn-info">Карточка</button>
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Кривий Василь Володимирович</td>
-                                        <td>Стрілки</td>
-                                        <td>isometric.mohsin@gmail.com</td>
-                                        <td>+923335586757</td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Edit">
-                                                <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button>
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                                <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                                            </p>
-                                        </td>
-                                        <td>
-                                                <button data-toggle="modal"  data-target="#pacient" type="button" class="btn-info">Карточка</button>
-                                            </td>
-                                    </tr>
+                                <tbody id="table">
                                 </tbody>
                             </table>
                             <div class="clearfix"></div>
@@ -154,97 +51,6 @@
                             </ul>
                         </div>
                     </div>
-               
-            
-            <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-                <div class="modal-dialog" style="width:70%">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                            <h4 class="modal-title custom_align" id="Heading">Змінити дані</h4> </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <input class="form-control " type="text" placeholder="ПІП"> </div>
-                            <div class="form-group">
-                                <input class="form-control " type="text" placeholder="Адреса"> </div>
-                            <div class="form-group">
-                                <textarea rows="1" class="form-control" placeholder="Email"></textarea>
-                            </div>
-                             <div class="form-group">
-                                <textarea rows="1" class="form-control" placeholder="Телефон"></textarea>
-                            </div>
-                             <div class="form-group">
-                                <textarea rows="1" class="form-control" placeholder="Ким скерований"></textarea>
-                            </div>
-                             
-                             <div class="form-group">
-                                <label for="dtp_input2" class="col-md-4 control-label">Рік народження</label>
-                                <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd.mm.yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" readonly>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                </div>
-                                <input type="hidden" id="dtp_input2" value="" /><br/>
-                            </div>
-   
-
-                            <div class="form-group">
-                                <label for="dtp_input2" class="col-md-4 control-label">Первинний візит</label>
-                                <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd.mm.yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" readonly>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                </div>
-                                <input type="hidden" id="dtp_input2" value="" /><br/>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="dtp_input2" class="col-md-4 control-label">Дата останнього візиту</label>
-                                <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd.mm.yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" readonly>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                </div>
-                                <input type="hidden" id="dtp_input2" value="" /><br/>
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea rows="3" class="form-control" placeholder="Скарги"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea rows="3" class="form-control" placeholder="Попереднє ортодонтичне лікування"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea rows="2" class="form-control" placeholder="Попередній діагноз"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea rows="2" class="form-control" placeholder="Остаточний діагноз"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea rows="2" class="form-control" placeholder="Консультація суміжних спеціалістів"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea rows="5" class="form-control" placeholder="План лікування"></textarea>
-                            </div>
-
-                           
-                        
-                        <div class="modal-footer ">
-                            <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Зберегти</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-           
-        </div>
         
         <div id="pacient" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
@@ -260,64 +66,63 @@
             <div class="col-md-5">
                 <h3>
                     <span class="glyphicon glyphicon-user"></span>
-                    Герич Роман Анатолійович
+                    <input class="input" type="text" id="name">
                 </h3>
                 <hr />
                 <h4>
                 <div class="row">
-                    <div class="col-md-4"><span class="glyphicon glyphicon-earphone"></span> Телефон |</div><div class="col-md-8"> 0976006668 | 0976006668</div>
+                    <div class="col-md-4"><span class="glyphicon glyphicon-earphone"></span>Телефон</div><div class="col-md-8">
+                        <input class="input" type="text" id="phone">
+                    </div>
                 </div>
-             
+                 <hr />
                 <div class="row"> 
-                    <div class="col-md-4"><span class="glyphicon glyphicon-envelope"></span> Email</div><div class="col-md-8"> Herych.romk@gmail.com</div>
+                    <div class="col-md-4"><span class="glyphicon glyphicon-envelope"></span> Email</div><div class="col-md-8">
+                        <input class="input" type="text" id="email">
+                    </div>
                 </div>
                 <hr />
                 <div class="row">      
-                    <div class="col-md-6"><span class="glyphicon glyphicon-home"></span>  Адреса</div><div class="col-md-6"> Стрілки</div>
+                    <div class="col-md-6"><span class="glyphicon glyphicon-home"></span>  Адреса</div><div class="col-md-6">
+                        <input class="input" type="text" id="address">
+                    </div>
                 </div>
                 <hr />
                 <div class="row">   
-                    <div class="col-md-6"><span class="glyphicon glyphicon-dashboard"></span> Рік народження</div><div class="col-md-6"> 16.11.1994</div>
+                    <div class="col-md-6"><span class="glyphicon glyphicon-dashboard"></span> Рік народження</div><div class="col-md-6">
+                        <input class="input" type="text" id="dob">
+                    </div>
                 </div>
                 <hr />
                 <div class="row">   
-                    <div class="col-md-6"><span class="glyphicon glyphicon-download"></span> Первинний візит</div><div class="col-md-6"> 16.05.2016</div>
-                </div>
-                <div class="row">   
-                    <div class="col-md-6"><span class="glyphicon glyphicon-upload"></span> Останній візит</div><div class="col-md-6"> 03.05.2017</div>
-                </div>
-                <hr />
-                <div class="row">   
-                    <div class="col-md-4"><span class="glyphicon glyphicon-upload"></span> Ким скерований</div><div class="col-md-8"> Бик Назар Юрійович</div>
+                    <div class="col-md-6"><span class="glyphicon glyphicon-download"></span> Первинний візит</div><div class="col-md-6">
+                        <input class="input" type="text" id="fVisit">
+                    </div>
                 </div>
                 <hr />
                 <div class="row">   
-                    <div class="col-md-4"><span class="glyphicon glyphicon-upload"></span> Борг</div><div class="col-md-8" style="color:red;"> 0 грн</div>
+                    <div class="col-md-6"><span class="glyphicon glyphicon-upload"></span> Останній візит</div><div class="col-md-6">
+                        <input class="input" type="text" id="lVisit">
+                    </div>
                 </div>
-                    
-                   
-                     
-                   
-                    
-                  
-                    
-                   
-                   
-                </h4>
+                <hr />
+                <div class="row">   
+                    <div class="col-md-4"><span class="glyphicon glyphicon-upload"></span> Борг</div><div class="col-md-8" style="color:red;">
+                     <input type="number" id="debt">
+                     </div>
+                </div>
+                <hr />
+                <button type="button" class="btn btn-primary" id="save">Зберегти</button>
+            </h4>
             </div>
             
             <div class="col-md-4">
-                <p><strong>Скарги</strong></p>Гостра біль у зубі. івасві авіфа віавіап ві ав 
-                <hr />
-                <p><strong>Попереднє ортодонтичне лікування</strong></p>Гостра біль у зубі. івасві авіфа віавіап ві ав 
-                <hr />
-                <p><strong><p>Попередній діагноз</strong></p>Гостра біль у зубі (4). іва віаві аівавіа ваві а
-                <hr />
-                <p><strong><p>Остаточний діагноз</strong></p>Гостра біль у зубі (4). іва віаві аівавіа ваві а
-                <hr />
-                <p><strong><p>Консультація суміжних спеціалістів</strong></p>Гостра біль у зубі (4). іва віаві аівавіа ваві а
-                <hr />
-                <p><strong><p>План лікування</strong></p>Гостра біль у зубі (4). іва віаві аівавіа ваві а Гостра біль у зубі (4). іва віаві аівавіа ваві а Гостра біль у зубі (4). іва віаві аівавіа ваві а  іль у зубі (4). іва віаві аівавіа ваві а Гос іль у зубі (4). іва віаві аівавіа ваві а Гос
+                <p><strong>Скарги</strong></p><textarea id="complaints" cols="40" rows="5"></textarea>
+                <p><strong>Попереднє ортодонтичне лікування</strong></p><textarea id="lastTreatment" cols="40" rows="5"></textarea> 
+                <p><strong><p>Попередній діагноз</strong></p><textarea id="lastDiagnosis" cols="40" rows="5"></textarea>
+                <p><strong><p>Остаточний діагноз</strong></p><textarea id="finishDiagnosis" cols="40" rows="5"></textarea>
+                <p><strong><p>Консультація суміжних спеціалістів</strong></p><textarea id="advice" cols="40" rows="5"></textarea>
+                <p><strong><p>План лікування</strong></p><textarea id="treatment" cols="40" rows="5"></textarea>
             </div>
             
             <div class="col-md-3">
@@ -462,78 +267,13 @@
 
   </div>
 </div>    
-       
-       <div class="modal fade" id="edit-p" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                            <h4 class="modal-title custom_align" id="Heading">Змінити запис</h4> 
-                            </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label class="сol-md-2 control-label">Назва</label>
-                                <select class="selectpicker" data-size="5">
-                                      <option>Сепарація зубів однієї щелепи</option>
-                                      <option>Знеболення провідникове</option>
-                                      <option>Апарат BI-HELIX</option>
-                                </select>
-                            </div>
-                            <div class="form-group">   
-                                <textarea rows="1" class="form-control" placeholder="Ціна"></textarea>
-                            </div>
-                             <div class="form-group">
-                                <textarea rows="1" class="form-control" placeholder="Оплата"></textarea>
-                            </div>
-                              <div class="form-group">
-                                <label for="dtp_input2" class="col-md-4 control-label">Дата</label>
-                                <div class="input-group date form_date col-md-8і" data-date="" data-date-format="dd.mm.yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" readonly>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                </div>
-                                <input type="hidden" id="dtp_input2" value="" /><br/>
-                            </div>
-                        </div>
-                        <div class="modal-footer ">
-                            <div class="modal-footer ">
-                                <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Зберегти</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-        
-           <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                            <h4 class="modal-title custom_align" id="Heading">Видалити цей запис</h4> </div>
-                        <div class="modal-body">
-                            <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Ви впевнені, що хочете видалити цей запис?</div>
-                        </div>
-                        <div class="modal-footer ">
-                            <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Так</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Ні</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            
-            
-        
-        
     </div>
     </div>    
 
-    <script src="js/functions.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/loadHeader.js"></script>
+    <script src="js/users.js"></script>
     
 
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
